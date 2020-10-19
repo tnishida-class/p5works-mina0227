@@ -16,7 +16,7 @@ function setup() {
      strokeWeight(2);
    }
    else if(i%3==0){
-     storokeweight(3);
+     strokeweight(3);
    }
     // ここまでの間になります
     let x = i * 10 + 10;
