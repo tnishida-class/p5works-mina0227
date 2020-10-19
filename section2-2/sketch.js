@@ -12,10 +12,10 @@ function setup() {
     if(i % 3 == 1){
      strokeWeight(1);
    }
-   else if(i%3==2){
+   else if( i % 3 == 2 ){
      strokeWeight(2);
    }
-   else if(i%3==0){
+   else if( i % 3 == 0 ){
      strokeweight(3);
    }
     // ここまでの間になります
