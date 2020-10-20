@@ -7,11 +7,11 @@ function setup(){
     if(i<5){
     stroke(0,0,255);
     noFill(0)
-    ellipse(200,200,x);
+    ellipse(200,200,x+10);
     }
     else{
     stroke(255,0,0);
-    ellipse(200,200,x)
+    ellipse(200,200,x+10)
     }
   }
 }
