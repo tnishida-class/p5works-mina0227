@@ -17,6 +17,7 @@ function setup() {
   }
   fill(blue);
   let size = d * 5;
+  noStroke()
   rect(0, 0, size, size);
   fill(255);
   noStroke();
