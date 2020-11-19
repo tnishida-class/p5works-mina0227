@@ -12,7 +12,14 @@ function setup(){
 function draw(){
   background(160, 192, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
-
+push();
+  translate(x,y)
+  rotate(frameCount/10)
+  translate(-x,-y)
+  star(x,y,25)
+  pop();
+  x += 3
+  y += 3
   // 端の処理パターン (1) 反対側から出てくる
   if(x > width){ x = 0; }
   else if(x < 0){ x = width; }
@@ -21,6 +28,8 @@ function draw(){
 }
 
 function star(cx, cy, r, angle){
+  fill(255,255,0)
+  noStroke()
   beginShape();
   for(var i = 0; i < 20; i++){
     var theta = TWO_PI * i * 2 / 5 - HALF_PI;
@@ -31,7 +40,10 @@ function star(cx, cy, r, angle){
   }
   endShape(CLOSE);
 }
-
+function mouseClicked(){
+  x = mouseX;
+  y = mouseY;
+}
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
 }
