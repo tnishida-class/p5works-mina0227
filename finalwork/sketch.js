@@ -68,7 +68,7 @@ function addBlocks() {
 
 
  function setup() {
-  createCanvas(800, 600);
+  createCanvas(1200, 600);
   rectMode(CENTER);
 
 
@@ -93,7 +93,7 @@ function draw() {
   for (let block of blocks) drawBlock(block);
   noStroke()
   fill(220)
-  rect(400,600,800,400)
+  rect(400,600,1200,400)
 }
 
 function mousePressed() {
