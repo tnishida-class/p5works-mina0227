@@ -1,4 +1,4 @@
-
+let dim
 
 function updatePosition(entity) {
   entity.x += entity.vx;
@@ -26,8 +26,8 @@ function applyJump(entity) {
 function drawPlayer(entity) {
   push()
   noStroke()
- fill("#31326f")
-  ellipse(entity.x, entity.y, 45);
+ fill(random(255),random(255),random(255))
+  ellipse(entity.x, entity.y, 60);
   pop()
 
 }
@@ -68,13 +68,15 @@ function addBlocks() {
 
 
  function setup() {
-  createCanvas(1200, 600);
+  createCanvas(1200, 800);
+   push()
   rectMode(CENTER);
 
 
   player = createPlayer();
 
   blocks = [];
+   pop()
 }
 
 function draw() {
@@ -93,7 +95,7 @@ function draw() {
   for (let block of blocks) drawBlock(block);
   noStroke()
   fill(220)
-  rect(400,600,1200,400)
+  rect(0,500,1200,400)
 }
 
 function mousePressed() {
