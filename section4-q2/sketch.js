@@ -1,3 +1,4 @@
+
 // テキスト「アニメーション」
 let x, y, vx, vy;
 
@@ -10,7 +11,7 @@ function setup(){
 }
 
 function draw(){
-  background(160, 192, 255);
+  background(0,5,58);
   // BLANK[2] (hint: 作った star 関数を使います)
 push();
   translate(x,y)
@@ -21,10 +22,18 @@ push();
   x += 3
   y += 3
   // 端の処理パターン (1) 反対側から出てくる
-  if(x > width){ x = 0; }
-  else if(x < 0){ x = width; }
-  if(y > height){ y = 0; }
-  if(y < 0){ y = height; }
+   // 速度＝位置の増分
+  x += vx;
+  y += vy;
+
+  // 跳ね返り
+  if(x < 0 || x > width){ vx = -1 * vx; } // 横
+  if(y < 0 || y > height){ vy = -1 * vy; } // 縦
+
+  // x座標, y座標を画面内にする
+  x = constrain(x, 0, width);
+  y = constrain(y, 0, height);
+
 }
 
 function star(cx, cy, r, angle){
