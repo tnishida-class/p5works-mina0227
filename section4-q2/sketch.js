@@ -1,5 +1,5 @@
 
-// テキスト「アニメーション」
+
 let x, y, vx, vy;
 
 function setup(){
